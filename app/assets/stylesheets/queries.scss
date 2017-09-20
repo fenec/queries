@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+
+  div {
+    width: 50%;
+  }
+}
+
+.right {
+  .queries_list {
+    width: 100%;
+    height: 300px;
+    overflow-x: auto;
+  }
+}
+
+.submit_button {
+  display: block;
+}

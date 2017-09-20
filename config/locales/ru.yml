@@ -1,0 +1,6 @@
+ru:
+  queries_count:
+    one: запрос
+    few: запроса
+    many: запросов
+    other: запросов

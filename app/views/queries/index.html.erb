@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="left">
+    <%= form_for @query do |f| %>
+      <%= f.text_area :query %>
+      <%= f.button :submit, class: "submit_button" %>
+    <% end %>
+  </div>
+  <div class="right">
+    <span><%= "#{@queries_count} #{I18n.translate :queries_count, count: @queries_count}" %></span>
+    <div class="queries_list">
+      <ul>
+        <% @queries_list.each do |query| %>
+          <li><%= query.execution_time %> - <%= query.query %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
