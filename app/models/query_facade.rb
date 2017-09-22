@@ -4,7 +4,7 @@ class QueryFacade
   end
 
   def queries_list
-    @queries_list ||= Query.all
+    @queries_list ||= Query.order("created_at DESC")
   end
 
   def queries_count

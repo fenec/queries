@@ -14,6 +14,13 @@
   }
 }
 
-.submit_button {
-  display: block;
+.left {
+  textarea {
+    width: 500px;
+    height: 150px;
+  }
+
+  .submit_button {
+    display: flex;
+  }
 }

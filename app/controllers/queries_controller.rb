@@ -5,10 +5,9 @@ class QueriesController < ApplicationController
   end
 
   def create
-    query = Query.new(query_params)
-    execution_time = Benchmark.ms { query.save! }
-    query.update_attributes(execution_time: execution_time)
-    render json: {new_query: query, queries_count: QueryFacade.new.queries_count}
+    query = QueryCreator.new(query_params).call
+    queries_count = QueryFacade.new.queries_count
+    render json: {new_query: query, queries_count: queries_count}
   end
 
   private

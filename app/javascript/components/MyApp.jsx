@@ -19,7 +19,7 @@ export default class MyApp extends React.Component {o
   }
 
   handleNewQuery = (result) => {
-    this.setState(prevState => ({queries_list: [...prevState.queries_list, result.new_query]}))
+    this.setState(prevState => ({queries_list: [result.new_query, ...prevState.queries_list]}))
     this.setState({queries_count: result.queries_count})
   }
 
